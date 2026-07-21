@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shahrazad &amp; Ashique — The Sangeet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#ffffff;
+    --mist:#eef4f8;
+    --mist-deep:#e3edf4;
+    --blue:#2f6c92;
+    --blue-deep:#1d4e6e;
+    --blue-dark:#123449;
+    --blue-soft:#5f9bb8;
+    --blue-pale:#bcdcec;
+    --ink:#1b3a4b;
+    --ink-soft:#5c7a8c;
+    --hair:rgba(47,108,146,0.28);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Cormorant Garamond', serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:640px;margin:0 auto;}
+
+  /* ---------------- top bar ---------------- */
+  .topline{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 28px 0;
+    font-family:'Playfair Display', serif;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--blue-soft);
+  }
+  @media (max-width: 480px) {
+    .topline{
+        gap: 100px;   /* or whatever value you need */
+    }
+}
+
+  /* ---------------- hero ---------------- */
+  .hero{
+    text-align:center;
+    padding:20px 28px 46px;
+  }
+
+  .hero .island{
+    width:190px;
+    height:auto;
+    margin:0 auto 14px;
+    display:block;
+  }
+
+  .hero .names{
+    font-family:'Caveat', cursive;
+    font-weight:700;
+    font-size:clamp(40px, 9vw, 58px);
+    color:var(--ink);
+    margin:0;
+    line-height:1.1;
+  }
+
+  .hero .saying{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:clamp(17px,3vw,21px);
+    color:var(--ink);
+    margin:2px 0 22px;
+  }
+
+  .rsvp{
+    display:inline-block;
+    background:var(--blue-deep);
+    color:#fff;
+    font-family:'Playfair Display', serif;
+    letter-spacing:0.22em;
+    font-size:13px;
+    text-transform:uppercase;
+    padding:12px 34px;
+    text-decoration:none;
+  }
+  .hero .rsvp-note{
+    margin-top:10px;
+    font-size:14px;
+    font-style:italic;
+    color:var(--ink-soft);
+  }
+
+  /* ---------------- Celebrate With Us ---------------- */
+  .celebrate{
+    text-align:center;
+    padding:8px 28px 50px;
+  }
+  .celebrate h2{
+    font-family:'Caveat', cursive;
+    font-weight:700;
+    font-size:clamp(34px,6vw,46px);
+    color:var(--ink);
+    margin:0 0 18px;
+  }
+
+  .celebrate .icon-wrap img{
+    width:92px;
+    height:92px;
+    margin:0 auto 22px;
+    display:block;
+  }
+
+  .celebrate p.copy{
+    max-width:460px;
+    margin:0 auto;
+    font-size:clamp(17px,2.6vw,20px);
+    line-height:1.75;
+    font-style:italic;
+    color:var(--ink-soft);
+  }
+
+  /* ---------------- event detail section ---------------- */
+  .event{
+    position:relative;
+    padding:56px 28px 60px;
+    overflow:hidden;
+  }
+  .event.tint{background:var(--mist);}
+
+  .event .motif{
+    position:absolute;
+    width:110px;
+    height:110px;
+    opacity:0.9;
+  }
+  .event .motif.right{top:36px;right:18px;}
+  .event .motif.left{bottom:20px;left:14px;}
+
+  .event .inner{
+    max-width:520px;
+    margin:0 auto;
+    text-align:center;
+    position:relative;
+  }
+
+  .event h2{
+    font-family:'Caveat', cursive;
+    font-weight:700;
+    font-size:clamp(34px,6vw,46px);
+    color:var(--ink);
+    margin:0 0 4px;
+  }
+  .event .tagline{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:15px;
+    color:var(--blue-soft);
+    margin:0 0 26px;
+  }
+
+  .rows{
+    text-align:left;
+    margin-top:10px;
+  }
+  .row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:20px;
+    padding:13px 4px;
+    border-bottom:1px solid var(--hair);
+  }
+  .row:first-child{border-top:1px solid var(--hair);}
+  .row .label{
+    font-family:'Playfair Display', serif;
+    font-size:13px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--blue-deep);
+    white-space:nowrap;
+  }
+  .row .value{
+    font-size:18px;
+    color:var(--ink);
+    text-align:right;
+  }
+
+  .event .footnote{
+    margin-top:20px;
+    font-size:15px;
+    font-style:italic;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
+
+  /* ---------------- footer ---------------- */
+  .footer{
+    text-align:center;
+    padding:50px 28px 70px;
+  }
+  .footer .script{
+    font-family:'Caveat', cursive;
+    font-weight:700;
+    font-size:clamp(28px,5vw,36px);
+    color:var(--ink);
+    display:block;
+    margin-bottom:8px;
+  }
+  .footer p{
+    color:var(--ink-soft);
+    font-size:15px;
+    letter-spacing:0.03em;
+    margin:0;
+  }
+  .location{
+    padding:50px 28px;
+    text-align:center;
+    background:#fff;
+}
+
+.location h2{
+    font-family:'Caveat', cursive;
+    font-size:2.2rem;
+    color:var(--blue-deep);
+    margin-bottom:12px;
+}
+
+.location-text{
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.1rem;
+    color:#5c6d7c;
+    line-height:1.7;
+    margin:0 auto 28px;
+    max-width:280px;
+}
+
+.map-btn{
+    display:inline-block;
+    padding:12px 28px;
+    background:var(--blue-deep);
+    color:#fff;
+    text-decoration:none;
+    border-radius:4px;
+    font-family:'Playfair Display', serif;
+    letter-spacing:.08em;
+    transition:.3s ease;
+}
+
+.map-btn:hover{
+    opacity:.9;
+    transform:translateY(-2px);
+}
+.map-container{
+    width:100%;
+    height:180px;
+    border-radius:16px;
+    overflow:hidden;
+    margin:20px auto 28px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.map-container iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+  @media (max-width:480px){
+    .event .motif{width:76px;height:76px;}
+    .event .motif.right{top:26px;right:6px;}
+    .event .motif.left{bottom:10px;left:2px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topline">
+    <span>31 Jul 2026</span>
+    <span>Shahrazad &amp; Ashique</span>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <img class="island" src="img/wedding-couple.svg" alt="Wedding couple illustration">
+
+    <p class="names">Shahrazad &amp; Ashique</p>
+    <p class="saying">are saying &ldquo;I do&rdquo;</p>
+
+  </section>
+
+  <!-- ================= CELEBRATE WITH US ================= -->
+  <section class="celebrate">
+    <h2>Celebrate With Us</h2>
+    <div class="icon-wrap">
+      <img src="img/wedding-dress.png" alt="Wedding couple illustration">
+    </div>
+    <p class="copy">An evening where melodies meet memories, laughter fills the air, and every moment becomes a cherished one. We can&rsquo;t wait to celebrate with you.</p>
+  </section>
+
+  <!-- ================= SANGEET DETAIL ================= -->
+  <section class="event tint" id="sangeet">
+    <img
+    src="img/hearts.png"
+    alt="Wedding couple illustration"
+    style="height:77px; display:block; margin-left:auto; margin-right:20px;">
+    <div class="inner">
+      <h2>The Sangeet</h2>
+      <p class="tagline">Music &amp; merriment under the stars</p>
+      <div class="rows">
+        <div class="row"><span class="label">Date</span><span class="value">31 July, 2026</span></div>
+        <div class="row"><span class="label">Time</span><span class="value">4:00 PM &ndash; 8:00 PM</span></div>
+        <div class="row"><span class="label">Venue</span><span class="value">Canoe Villa, Alappuzha</span></div>
+        <div class="row"><span class="label">Highlights</span><span class="value">Games, dance &amp; celebration</span></div>
+      </div>
+      <p class="footnote">Plenty of fun games and surprise events lined up through the evening &mdash; come dressed to dance!</p>
+    </div>
+  </section>
+
+  <section class="location">
+    <h2>Come Celebrate With Us</h2>
+
+    <p class="location-text">
+        Join us at our venue and let the festivities begin.
+    </p>
+
+     <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.764416726983!2d76.35182267502506!3d9.52918559055348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08840f92256793%3A0x1faf49890dea8963!2sCanoe%20Ville!5e0!3m2!1sen!2sin!4v1784646879796!5m2!1sen!2sin"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+    </div>
+
+    <a href="https://maps.app.goo.gl/1L6u8RBYwgjMJHcB6"
+       target="_blank"
+       class="map-btn">
+        📍 View Location
+    </a>
+</section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <span class="script">With love &amp; gratitude</span>
+    <p>Shahrazad &amp; Ashique &nbsp;&middot;&nbsp; 31 July 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>
